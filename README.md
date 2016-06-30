@@ -1,2 +1,2 @@
-# analogue-watch
+# Analogue-watch
 Часы со стрелками
