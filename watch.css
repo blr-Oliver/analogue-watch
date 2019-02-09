@@ -30,6 +30,13 @@
   line-height: 1;
 }
 
+.axis, .hands *, .ticks * {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform-origin: 0;
+}
+
 .ticks * {
   right: 2px;
   height: 2px;
@@ -43,13 +50,6 @@
   border-right-width: 6px;
 }
 
-.axis, .hands *, .ticks * {
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  transform-origin: 0;
-}
-
 .axis {
   width: 10px;
   height: 10px;
@@ -57,16 +57,19 @@
   margin-top: -5px;
   background-color: black;
   border-radius: 50%;
+  border: 0.5px solid #ccc;
 }
 
 .hands * {
-  background-image: linear-gradient(90deg, rgba(0, 0, 0, .3), rgba(0, 0, 0, 1.0)); /* полупрозрачная у основания */
+  _background-image: linear-gradient(90deg, rgba(0, 0, 0, .3), rgba(0, 0, 0, 1.0)); /* полупрозрачная у основания */
+  background-color: black;
   border-top-right-radius: 100% 10px; /* заостренная стрелка */
   border-bottom-right-radius: 100% 10px;
+  border: 0.5px solid #ccc;
 }
 
 .watch.transition .hands *{
-  transition: transform 1s; /* если часы пометить классом transition, к стрелкам будет применяться CSS-анимация*/
+  _transition: transform 1s; /* если часы пометить классом transition, к стрелкам будет применяться CSS-анимация*/
 }
 .hourHand {
   height: 6px;
